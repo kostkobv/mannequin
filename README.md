@@ -4,6 +4,11 @@
 
 _A mannequin (also called a manikin, dummy, lay figure or dress form) is an often articulated doll used by artists, tailors, dressmakers, windowdressers and others especially to display or fit clothing. The term is also used for life-sized dolls with simulated airways used in the teaching of first aid, CPR, and advanced airway management skills such as tracheal intubation and for human figures used in computer simulation to model the behavior of the human body. During the 1950s, mannequins were used in nuclear tests to help show the effects of nuclear weapons on humans._
 
+## Why do I need this?
+Basically this is a thing to simplify your local development of microservices that suppose to run in k8s.
+Especially it should become handy if you have a lot of dependencies or you need to work in multiple services at the same time.
+Idea is that you can just write some configs for your local projects, configure it's dependencies (both services like mysql, beanstalk or redis; or your local codebases/other projects that are registered in this thing( and then it would autodetect if you have minikube or docker-for-desktop, build your image, deploy it there using helm. You can enable `watch` that would build new image and redeploy it locally on codechange.
+
 ## Features
 1. Works with Kubernetes
 - Before deployment checks if environment matches the defined one in configuration
